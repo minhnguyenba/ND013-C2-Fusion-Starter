@@ -1,0 +1,79 @@
+1. Common issue
+
+1.1. No module named 'numpy': Visual Studio Code
+--> Solution: 
+    +) In visual studio code, Ctrl + Shift + P
+    +) Select: python: select Interpreter: select python version one by one and retry to run 
+    -> Issue will be fixed with suitable python version
+    refer: https://stackoverflow.com/questions/40185437/no-module-named-numpy-visual-studio-code
+
+1.2. "message": "Import \"torch\" could not be resolved"
+    --> Use this command to install torch: pip3 install torch torchvision torchaudio
+
+1.3. In objdet_tools.py, "pcl_attr" is not defined
+
+
+1.4. ModuleNotFoundError: No module named 'easydict'
+    --> install easydict: pip3 install easydict
+
+1.5. Python ImportError: No module named wx
+    --> install pip install -U wxPython
+
+1.6. AttributeError: 'EasyDict' object has no attribute 'pretrained_filename'
+'EasyDict' object has no attribute 'pretrained_filename'
+  File "/Users/nguyenbaminh/Udacity/Project2/nd013-c2-fusion-starter/student/objdet_detect.py", line 109, in create_model
+    assert os.path.isfile(configs.pretrained_filename), "No file at {}".format(configs.pretrained_filename)
+  File "/Users/nguyenbaminh/Udacity/Project2/nd013-c2-fusion-starter/loop_over_dataset.py", line 66, in <module>
+    model_det = det.create_model(configs_det)
+AttributeError: 'EasyDict' object has no attribute 'pretrained_filename'
+
+    --> Forgot extract pretrained zip file
+
+1.7. Doesn't find the file in results folder 
+    because result zip files were not extract and copy files in extract folders to results folder
+    --> extract result zip files and copy files in extract folders to results folder
+
+    Or you can re-define folder path for those file base on model and sequence number
+    ## Select Waymo Open Dataset file and frame numbers
+    seq = SEQUENCE3         # options are SEQUENCE1 or SEQUENCE2 or SEQUENCE3
+    ## Prepare Waymo Open Dataset file for loading
+    model_name ='darknet' # options are 'darknet', 'fpn_resnet'
+    if seq == SEQUENCE1:
+        data_filename = 'training_segment-1005081002024129653_5313_150_5333_150_with_camera_labels.tfrecord' # Sequence 1
+        if model_name == 'darknet':
+            ret_dir = RET_DARKNET_SEQ1
+        else:
+            ret_dir = RET_RESNET_SEQ1
+    elif seq == SEQUENCE2:
+        data_filename = 'training_segment-10072231702153043603_5725_000_5745_000_with_camera_labels.tfrecord' # Sequence 2
+        if model_name == 'darknet':
+            ret_dir = RET_DARKNET_SEQ2
+        else:
+            ret_dir = RET_RESNET_SEQ2
+    else:
+        data_filename = 'training_segment-10963653239323173269_1924_000_1944_000_with_camera_labels.tfrecord' # Sequence 3
+        if model_name == 'darknet':
+            ret_dir = RET_DARKNET_SEQ3
+        else:
+            ret_dir = RET_RESNET_SEQ3
+
+1.8. Capture screen of each frame and save to img folder:
+    Not support MacOS now
+
+1.9. exec_data has no meaning at present
+    --> Udacity should fix it
+
+1.10. In objdet_tools.py, below error occured when execute ID_S3_EX2
+    OpenCV(4.8.1) :-1: error: (-5:Bad argument) in function 'line'
+    > Overload resolution failed:
+    >  - Can't parse 'pt1'. Sequence item with index 0 has a wrong type
+    >  - Can't parse 'pt1'. Sequence item with index 0 has a wrong type
+
+    --> Type of param1, param2 of line function is wrong. should convert from float to int using ".astype(int)"
+
+1.11. Exception has occurred: AttributeError: 'EasyDict' object has no attribute 'min_iou'
+    --> Lack define min_iou as a member of config in darknet model. add this member for config
+
+1.12. Exception has occurred: TypeError: compute_performance_stats() takes 1 positional argument but 2 were given
+    when call compute_performance_stats(det_performance_all, configs_det)
+    --> redundant a argument --> remove that argument 'configs_det'
