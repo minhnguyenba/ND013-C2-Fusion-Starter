@@ -148,13 +148,13 @@ This project is done by using the Waymo Open Dataset's real-world data collected
 
   - Visualize the point-cloud using open3d module
   - Identify 10 images of vehicles (ID_S1_EX2). Results are as below images
-<br>
+
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
 |<img width="1604" alt="" src="img/S1/EX2/Screenshot1.png">  |  <img width="1604" alt="" src="img/S1/EX2/Screenshot2.png">|<img width="1604" alt="" src="img/S1/EX2/Screenshot3.png">|
 |<img width="1604" alt="" src="img/S1/EX2/Screenshot4.png">  |  <img width="1604" alt="" src="img/S1/EX2/Screenshot5.png">|<img width="1604" alt="" src="img/S1/EX2/Screenshot6.png">|
 |<img width="1604" alt="" src="img/S1/EX2/Screenshot7.png">  |  <img width="1604" alt="" src="img/S1/EX2/Screenshot8.png">|<img width="1604" alt="" src="img/S1/EX2/Screenshot9.png">|
-<br>
+
 
 - Section 2: Create Birds-Eye View (BEV) from Lidar PCL
   - Convert coordinates in x,y [m] into x,y [pixel] based on width and height of the bev map (ID_S2_EX1)
