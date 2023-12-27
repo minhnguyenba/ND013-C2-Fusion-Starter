@@ -1,3 +1,4 @@
+| | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
 |<img width="1604" alt="" src="img/S1/EX2/Screenshot1.png">  |  <img width="1604" alt="" src="img/S1/EX2/Screenshot2.png">|<img width="1604" alt="" src="img/S1/EX2/Screenshot3.png">|
 |<img width="1604" alt="" src="img/S1/EX2/Screenshot4.png">  |  <img width="1604" alt="" src="img/S1/EX2/Screenshot5.png">|<img width="1604" alt="" src="img/S1/EX2/Screenshot6.png">|
