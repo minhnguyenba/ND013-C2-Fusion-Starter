@@ -136,6 +136,70 @@ Even without solving any of the tasks, the project code can be executed.
 
 The final project uses pre-computed lidar detections in order for all students to have the same input data. If you use the workspace, the data is prepared there already. Otherwise, [download the pre-computed lidar detections](https://drive.google.com/drive/folders/1IkqFGYTF6Fh_d8J3UjQOSNJ2V42UDZpO?usp=sharing) (~1 GB), unzip them and put them in the folder `results`.
 
+## Excersices
+This project is done by using the Waymo Open Dataset's real-world data collected from lidar sensor. Here are the project's requirements that should be done by each section.
+
+- Section 1: Computer Lidar Point-Cloud from Range Image
+  - Convert the range image "range" and "intensity" channel to 8-bit
+  - Able to visualize the result using OpenCV (ID_S1_EX1). Result is as below image
+<br>
+<img src="img/S1/EX1/Screenshot_S1_EX1.png"/>
+<br>
+
+  - Visualize the point-cloud using open3d module
+  - Identify 10 images of vehicles (ID_S1_EX2). Results are as below images
+<br>
+| | | |
+|:-------------------------:|:-------------------------:|:-------------------------:|
+|<img width="1604" alt="" src="img/S1/EX2/Screenshot1.png">  |  <img width="1604" alt="" src="img/S1/EX2/Screenshot2.png">|<img width="1604" alt="" src="img/S1/EX2/Screenshot3.png">|
+|<img width="1604" alt="" src="img/S1/EX2/Screenshot4.png">  |  <img width="1604" alt="" src="img/S1/EX2/Screenshot5.png">|<img width="1604" alt="" src="img/S1/EX2/Screenshot6.png">|
+|<img width="1604" alt="" src="img/S1/EX2/Screenshot7.png">  |  <img width="1604" alt="" src="img/S1/EX2/Screenshot8.png">|<img width="1604" alt="" src="img/S1/EX2/Screenshot9.png">|
+<br>
+
+- Section 2: Create Birds-Eye View (BEV) from Lidar PCL
+  - Convert coordinates in x,y [m] into x,y [pixel] based on width and height of the bev map (ID_S2_EX1)
+  Result is as below image
+<br>
+<img src="img/S2/EX1/Screenshot _S2_EX1.png"/>
+<br>
+  - Adjust instensity so that the vehicles are clearly visible (ID_S2_EX2)
+    Result is as below image
+<br>
+<img src="img/S2/EX2/Screenshot 1.png"/>
+<br>
+  - Compare the to results from just normalizing the height in each BEV map pixel and filling the "height" channel. (ID_S2_EX3)
+  Result is as below image
+<br>
+<img src="img/S2/EX3/Screenshot1.png"/>
+<br>
+
+- Section 3: Model-based Object Detection in BEV Image
+  - In addition to Complex YOLO, extract the code for output decoding and post-processing from the GitHub repo. (ID_S3_EX1)
+    Result is as below image
+<br>
+<img src="img/S3/Screenshot1.png"/>
+<br>
+  - Tranform BEV coordinates and convert model output to expected bounding box format. (ID_S3_EX2)
+    Result is as below image
+<br>
+<img src="img/S3/Screenshot2.png"/>
+<br>
+
+<br>
+
+- Section 4: Performance Evaluation for Object Detection
+  - Compare the ground-truth label and detected objects and count the true positive (ID_S4_EX1)
+  - Compute the false negative and false positive based on IoU and ground-truth labels (ID_S4_EX2)
+  - Compute the precision and recall for all frames (ID_S4_EX3)
+<br>
+| use_labels_as_objects = False|use_labels_as_objects = True | 
+|:-------------------------:|:-------------------------:|
+|<img width="1604" alt="" src="img/S4/eval_false.png">  |  <img width="1604" alt="" src="img/S4/eval_true.png">|
+<br>
+All the projects are run in MacOS Ventura 13.1 with Radeon Pro 580 8GB. The running code for this project is 
+
+<code> python loop_over_dataset.py </code>
+
 ## External Dependencies
 Parts of this project are based on the following repositories: 
 - [Simple Waymo Open Dataset Reader](https://github.com/gdlg/simple-waymo-open-dataset-reader)
