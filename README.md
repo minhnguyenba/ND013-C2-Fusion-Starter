@@ -142,7 +142,6 @@ This project is done by using the Waymo Open Dataset's real-world data collected
 - Section 1: Computer Lidar Point-Cloud from Range Image
   - Convert the range image "range" and "intensity" channel to 8-bit
   - Able to visualize the result using OpenCV (ID_S1_EX1). Result is as below image
-<br>
 <img src="img/S1/EX1/Screenshot_S1_EX1.png"/>
 <br>
 
@@ -191,11 +190,11 @@ This project is done by using the Waymo Open Dataset's real-world data collected
   - Compare the ground-truth label and detected objects and count the true positive (ID_S4_EX1)
   - Compute the false negative and false positive based on IoU and ground-truth labels (ID_S4_EX2)
   - Compute the precision and recall for all frames (ID_S4_EX3)
-<br>
+
 | use_labels_as_objects = False|use_labels_as_objects = True | 
 |:-------------------------:|:-------------------------:|
 |<img width="1604" alt="" src="img/S4/eval_false.png">  |  <img width="1604" alt="" src="img/S4/eval_true.png">|
-<br>
+
 All the projects are run in MacOS Ventura 13.1 with Radeon Pro 580 8GB. The running code for this project is 
 
 <code> python loop_over_dataset.py </code>
