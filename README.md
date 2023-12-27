@@ -158,32 +158,29 @@ This project is done by using the Waymo Open Dataset's real-world data collected
 - Section 2: Create Birds-Eye View (BEV) from Lidar PCL
   - Convert coordinates in x,y [m] into x,y [pixel] based on width and height of the bev map (ID_S2_EX1)
   Result is as below image
-<br>
+
 <img src="img/S2/EX1/Screenshot _S2_EX1.png"/>
 <br>
   - Adjust instensity so that the vehicles are clearly visible (ID_S2_EX2)
     Result is as below image
-<br>
+
 <img src="img/S2/EX2/Screenshot 1.png"/>
 <br>
   - Compare the to results from just normalizing the height in each BEV map pixel and filling the "height" channel. (ID_S2_EX3)
   Result is as below image
-<br>
+
 <img src="img/S2/EX3/Screenshot1.png"/>
 <br>
 
 - Section 3: Model-based Object Detection in BEV Image
   - In addition to Complex YOLO, extract the code for output decoding and post-processing from the GitHub repo. (ID_S3_EX1)
     Result is as below image
-<br>
 <img src="img/S3/Screenshot1.png"/>
 <br>
   - Tranform BEV coordinates and convert model output to expected bounding box format. (ID_S3_EX2)
     Result is as below image
-<br>
-<img src="img/S3/Screenshot2.png"/>
-<br>
 
+<img src="img/S3/Screenshot2.png"/>
 <br>
 
 - Section 4: Performance Evaluation for Object Detection
