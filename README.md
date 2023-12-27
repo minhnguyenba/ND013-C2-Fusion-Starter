@@ -21,14 +21,14 @@ Also, the project code contains various tasks, which are detailed step-by-step i
 📦project<br>
  ┣ 📂dataset --> contains the Waymo Open Dataset sequences <br>
  ┃<br>
- ┣ img<br>    --> excercice results
+ ┣ img<br> --> excercice results
  ┃ ┣ 📂S1<br>
  ┃ ┃ ┣ 📂EX1<br>
  ┃ ┃ ┣ 📂EX2<br>
  ┃ ┣ 📂S2<br>
  ┃ ┣ 📂S3<br>
  ┃ ┣ 📂S4<br>
- ┃ ┣ img_title_1.jpeg--> title image<br>
+ ┃ ┣ img_title_1.jpeg --> title image<br>
  ┃ ┗ img_title_2_new.png --> flowchart<br>
  ┃<br>
  ┣ 📂misc<br>
@@ -46,7 +46,6 @@ Also, the project code contains various tasks, which are detailed step-by-step i
  ┃ ┃ ┣ 📂results_sequence_1_resnet<br>
  ┃ ┃ ┣ 📂results_sequence_2_resnet<br>
  ┃ ┗ ┣ 📂results_sequence_3_resnet<br>
- ┃<br>
  ┃ <br>
  ┣ 📂student <br>
  ┃ ┣ association.py --> data association logic for assigning measurements to tracks incl. student tasks <br>
