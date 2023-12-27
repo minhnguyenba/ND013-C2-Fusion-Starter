@@ -21,7 +21,7 @@ Also, the project code contains various tasks, which are detailed step-by-step i
 📦project<br>
  ┣ 📂dataset --> contains the Waymo Open Dataset sequences <br>
  ┃<br>
- ┣ img<br> --> excercice results
+ ┣ img --> excercice results<br>
  ┃ ┣ 📂S1<br>
  ┃ ┃ ┣ 📂EX1<br>
  ┃ ┃ ┣ 📂EX2<br>
